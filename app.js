@@ -1,17 +1,29 @@
+const express = require('express');
 
-import express from 'express'
+const app = express();
 
-const app = express()
+const PORT = 3000;
 
-// RUTAS => ROUTES => ROUTER
+// RUTAS
+
 app.get('/', (req, res) => {
-  res.send('Hello World!!!!@@@@@')
-})
-
-app.get('/contacto', (req, res) => {
-    res.send('Página de contacto!');
+  res.send('<h1>INDEX</h1>');
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
-})
+app.get('/servicios', (req, res) => {
+  res.send('<h1>SERVICIOS</h1>');
+});
+
+app.get('/nosotros', (req, res) => {
+  res.send('<h1>NOSOTOROS</h1>');
+});
+
+app.get('/contacto', (req, res) => {
+  res.send('<h1>CONTACTO</h1>');
+});
+
+
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
