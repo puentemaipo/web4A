@@ -8,8 +8,6 @@ const app = express();
 const PORT = process.env.PORT;
 console.log(PORT);
 
-const user = process.env.DB_USER;
-console.log(user);
 
 // CONFIGURAR EJS
 app.set('view engine', 'ejs');
